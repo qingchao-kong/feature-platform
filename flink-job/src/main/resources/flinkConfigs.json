@@ -1,0 +1,20 @@
+{
+  "configType": "COUNT",
+  "bizType": "game",
+  "targetType": "user",
+  "eventType": "pay",
+  "idField": "ext.uid",
+  "idType": "uid",
+  "featureNamePrefix": "userPayAvg",
+  "aggConfig": {
+    "windows": ["10m","3h"]
+  },
+  "sink": [
+    {
+      "type": "HBase",
+      "params": {
+        "table": "testFeature"
+      }
+    }
+  ]
+}
